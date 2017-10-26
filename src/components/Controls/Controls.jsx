@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createGoal, addGoal } from '../../actions';
+import { addGoal } from '../../actions';
+import PropTypes from 'prop-types';
 
 class Controls extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class Controls extends Component {
     };
   }
 
-  submitOnChange = (event) => {
+  handleOnChange = (event) => {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({
@@ -28,30 +29,33 @@ class Controls extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { title, body } = this.state;
     return (
       <div>
         <input
           type='text'
           name='title'
-          placeholder='Goal title here...'
+          placeholder='Declare your goal...'
           value={title}
-          onChange={ (event) => this.submitOnChange(event) } />
+          onChange={(event) => this.handleOnChange(event)} />
         <input
           type='text'
           name='body'
-          placeholder='Describe your goal bitch...'
+          placeholder='Steps to achieve...'
           value={body}
-          onChange={ (event) => this.submitOnChange(event) }  />
+          onChange={(event) => this.handleOnChange(event)} />
         <input
           type='submit'
           value='Save'
-          onClick={ () => this.submitOnClick(this.state) }/>
+          onClick={() => this.submitOnClick(this.state)} />
       </div>
     );
   }
 }
+
+Controls.propTypes = {
+  handleSubmit: PropTypes.func
+};
 
 const mapStateToProps = store => ({
   goals: store.goal

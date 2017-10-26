@@ -5,9 +5,14 @@ export const createGoal = goal => ({
   goal
 });
 
-export const getGoal = goals => ({
+export const getGoal = goalsArray => ({
   type: 'GET_GOALS',
-  goals
+  goalsArray
+});
+
+export const deleteGoal = goalToRemove => ({
+  type: 'REMOVE_GOAL',
+  goalToRemove
 });
 
 export const addGoal = goal => dispatch => {
@@ -30,4 +35,10 @@ export const retrieveGoals = () => dispatch => {
     }
     dispatch(getGoal(newState));
   });
+};
+
+export const removeGoal = goalId => dispatch => {
+  const goalRef = firebase.database().ref(`/goals/${goalId}`);
+  goalRef.remove();
+  dispatch(deleteGoal(goalId));
 };

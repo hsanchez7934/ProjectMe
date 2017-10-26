@@ -24,7 +24,7 @@ export const addGoal = goal => dispatch => {
 export const retrieveGoals = () => dispatch => {
   const goalRef = firebase.database().ref('goals');
   goalRef.on('value', (snapshot) => {
-    let goals = snapshot.val();
+    const goals = snapshot.val();
     let newState = [];
     for (let goal in goals) {
       newState.push({
@@ -33,6 +33,7 @@ export const retrieveGoals = () => dispatch => {
         body: goals[goal].body
       });
     }
+    // const newState = Object.entries(goals).map(([key, value]) => Object.assign({}, value, {id: key}))
     dispatch(getGoal(newState));
   });
 };

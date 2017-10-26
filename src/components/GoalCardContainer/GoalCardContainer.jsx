@@ -1,40 +1,45 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GoalCard from '../GoalCard/GoalCard.jsx';
-import { createGoal, getGoal } from '../../actions';
+import { createGoal, getGoal, retrieveGoals } from '../../actions';
 
-class GoalCardContainer extends Component{
+class GoalCardContainer extends Component {
   constructor() {
     super();
   }
 
-  componentDidMount(){
-    // this.renderGoals(this.props.goals)
+  componentWillMount() {
+    this.props.getGoals();
   }
 
-  renderGoals = (goalsArray) => {
-    goalsArray.map(goal => {
-      return (
-        <GoalCard goal={goal}/>
-      )
-    })
+  // componentWillRecieveProps(nextProps) {
+  //   this.
+  // }
+
+  renderGoals = () => {
+    console.log('test');
+    const { goalsDB } = this.props;
+    return goalsDB.map( (goal, index) =>
+      <GoalCard
+        key={index}
+        goal={goal} />);
   }
 
-  render(){
+  render() {
     return (
       <section>
-        { this.renderGoals(this.props.goals) }
+        { this.renderGoals() }
       </section>
-    )
+    );
   }
 }
 
 const mapStateToProps = store => ({
-  goals: store.goal
-})
+  goalsDB: store.goal
+});
 
 const mapDispatchToProps = dispatch => ({
-  getGoals: goals => dispatch(getGoal(goals))
-})
+  getGoals: () => dispatch(retrieveGoals())
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(GoalCardContainer);

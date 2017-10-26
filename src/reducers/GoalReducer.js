@@ -1,11 +1,12 @@
 const goal = (state = [], action) => {
-  switch(action.type) {
-    case 'ADD_GOAL':
-      return [...state, action.goal];
-    case 'GET_GOALS':
-      return [...state]
-    default:
-     return state;
+  console.log(action.type);
+switch (action.type) {
+  case 'ADD_GOAL':
+    return action.goal;
+  case 'GET_GOALS':
+    return action.goals;
+  default:
+    return state;
   }
 };
 

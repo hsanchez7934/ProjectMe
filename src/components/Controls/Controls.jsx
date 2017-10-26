@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createGoal } from '../../actions';
+import { createGoal, addGoal } from '../../actions';
 
 class Controls extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       title: '',
       body: ''
-    }
+    };
   }
 
   submitOnChange = (event) => {
@@ -16,15 +16,15 @@ class Controls extends Component {
     const value = event.target.value;
     this.setState({
       [key]: value
-    })
+    });
   }
 
-  submitOnClick = (goal) => {
+  submitOnClick = goal => {
     this.props.handleSubmit(goal);
     this.setState({
       title: '',
       body: ''
-    })
+    });
   }
 
   render() {
@@ -49,16 +49,16 @@ class Controls extends Component {
           value='Save'
           onClick={ () => this.submitOnClick(this.state) }/>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = store => ({
-  goals: store.goals
+  goals: store.goal
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleSubmit: goal => dispatch(createGoal(goal))
+  handleSubmit: goal => dispatch(addGoal(goal))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Controls);

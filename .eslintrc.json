@@ -1,9 +1,15 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true,
+        "mocha": true
     },
-    "extends": "eslint:recommended",
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -11,9 +17,6 @@
         },
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
       "react/prop-types": [1],
       "eqeqeq": ["error", "always"],
@@ -38,17 +41,7 @@
       "max-depth": ["warn", 4],
       "no-unused-vars": ["error", { "varsIgnorePattern": "config || Adapter"}]
     },
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+    "globals": {
+    "expect": true
     }
 }

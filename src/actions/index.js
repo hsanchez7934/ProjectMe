@@ -1,4 +1,5 @@
 import firebase from '../firebase.js';
+import apiKey from '../key.js';
 
 export const createGoal = goal => ({
   type: 'ADD_GOAL',
@@ -15,11 +16,30 @@ export const deleteGoal = goalToRemove => ({
   goalToRemove
 });
 
+export const getQuote = quote => ({
+  type: 'GET_QUOTE',
+  quote
+});
+
+export const retrieveQuote = () => dispatch => {
+  fetch('http://quotes.rest/quote/random/', {
+    method: 'GET',
+    headers: {
+      "Accept": "application/json",
+      "X-TheySaidSo-Api-Secret": apiKey
+    }
+  })
+    .then(response => response.json())
+    .then(parsedResponse => dispatch(getQuote(parsedResponse)))
+    .catch(err => err);
+};
+
 export const addGoal = goal => dispatch => {
   const goalRef = firebase.database().ref('goals');
   goalRef.push(goal);
   dispatch(createGoal(goal));
 };
+
 
 export const retrieveGoals = () => dispatch => {
   const goalRef = firebase.database().ref('goals');

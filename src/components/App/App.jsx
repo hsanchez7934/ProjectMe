@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Controls from '../Controls/Controls.jsx';
+import GoalCardContainer from '../GoalCardContainer/GoalCardContainer.jsx'
 
 class App extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <Controls />
+        <GoalCardContainer />
       </div>
     );
   }

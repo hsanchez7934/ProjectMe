@@ -11,8 +11,22 @@ class Controls extends Component {
     }
   }
 
+  submitOnChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [key]: value
+    })
+  }
 
-  
+  submitOnClick = (goal) => {
+    this.props.handleSubmit(goal);
+    this.setState({
+      title: '',
+      body: ''
+    })
+  }
+
   render() {
     console.log(this.props);
     const { title, body } = this.state;
@@ -23,17 +37,17 @@ class Controls extends Component {
           name='title'
           placeholder='Goal title here...'
           value={title}
-          onChange='{}' />
+          onChange={ (event) => this.submitOnChange(event) } />
         <input
           type='text'
           name='body'
           placeholder='Describe your goal bitch...'
           value={body}
-          onChange='{}' />
+          onChange={ (event) => this.submitOnChange(event) }  />
         <input
           type='submit'
           value='Save'
-          onClick=''/>
+          onClick={ () => this.submitOnClick(this.state) }/>
       </div>
     )
   }

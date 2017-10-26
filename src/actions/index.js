@@ -1,4 +1,9 @@
 export const createGoal = goal => ({
-    type: 'GOAL',
+    type: 'ADD_GOAL',
     goal
-  });
+});
+
+export const getGoal = goals => ({
+    type: 'GET_GOALS',
+    goals
+});

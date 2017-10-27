@@ -12,6 +12,43 @@ class FeedYourMindContainer extends Component {
   }
 
   createCards = () => {
+    const array = [
+      {
+        title: `yo thats where it happens bro`,
+        description:`get it how we want it you littler
+                      bitches just done know nigga`,
+        url: '#',
+        urlToImage: '3'
+      },
+      {
+        title: `yo thats where it happens bro`,
+        description:`get it how we want it you littler
+                      bitches just done know nigga`,
+        url: '#',
+        urlToImage: '3'
+      },
+      {
+        title: `yo thats where it happens bro`,
+        description:`get it how we want it you littler
+                      bitches just done know nigga`,
+        url: '#',
+        urlToImage: '3'
+      },
+      {
+        title: `yo thats where it happens bro`,
+        description:`get it how we want it you littler
+                      bitches just done know nigga`,
+        url: '#',
+        urlToImage: '3'
+      },
+      {
+        title: `yo thats where it happens bro`,
+        description:`get it how we want it you littler
+                      bitches just done know nigga`,
+        url: '#',
+        urlToImage: '3'
+      }
+    ]
     const { articles } = this.props;
     return articles.map( (article, index) =>
       <FeedYourMindCard article={article} key={index} />);

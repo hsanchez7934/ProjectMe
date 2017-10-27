@@ -6,32 +6,30 @@ import './FeedYourMindCard.css';
 const FeedYourMindCard = ({ article }) => {
   const { title, description, url, urlToImage } = article;
   return (
-    <article className='info-card'>
-      <section className='wrapper'>
+    <div className="card-style card">
+    <div className="wrapper">
+      {/* <img src={url} /> */}
+      <div className="data">
+        <div className="content">
 
-        <section className='data'>
-
-          <section className='content'>
-            <h3 className='info-card-title'>{title}</h3>
-            <p className='info-card-body'>{description}</p>
-            <label htmlFor='show-menu'><span></span></label>
-            <a href={url} className='info-card-link'>
-              Click here for full article
-            </a>
-          </section>
-          
-          <input type="checkbox" className="show-menu" />
-          <ul className="menu-content">
-            <li><a href="#" className="fa fa-bookmark-o"></a></li>
-            <li><a href="#" className="fa fa-heart-o"><span>47</span></a></li>
-            <li><a href="#" className="fa fa-comment-o"><span>8</span></a></li>
-          </ul>
-
-        </section>
+          <h3 className="title">{title}</h3>
+          <p className="text">{description}</p>
+          <a href={url} className='link-to-article'>Click here for full article</a>
+          <label htmlFor="show-menu" className="menu-button"><span></span></label>
+        </div>
+        <input type="checkbox" id="show-menu" />
+        <ul className="menu-content">
+          <li>
+            <a href="#" className="fa fa-bookmark-o"></a>
+          </li>
+          <li><a href="#" className="fa fa-heart-o"><span>47</span></a></li>
+          <li><a href="#" className="fa fa-comment-o"><span>8</span></a></li>
+        </ul>
+      </div>
 
 
-      </section>
-    </article>
+    </div>
+  </div>
   );
 };
 

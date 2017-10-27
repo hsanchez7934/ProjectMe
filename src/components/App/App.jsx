@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Controls from '../Controls/Controls.jsx';
 import GoalCardContainer from '../GoalCardContainer/GoalCardContainer.jsx';
-import apiKey from '../../key.js';
+import FeedYourMindContainer from '../FeedYourMindContainer/FeedYourMindContainer.jsx';
 import Hero from '../Hero/Hero.jsx';
+import newsKey from '../../newskey.js';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
         <Hero />
         <Controls />
         <GoalCardContainer />
+        <FeedYourMindContainer />
       </div>
     );
   }

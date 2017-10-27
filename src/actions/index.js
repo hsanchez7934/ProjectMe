@@ -1,5 +1,6 @@
 import firebase from '../firebase.js';
-import apiKey from '../key.js';
+import quotesApiKey from '../quoteskey.js';
+import newsKey from '../newskey.js';
 
 export const createGoal = goal => ({
   type: 'ADD_GOAL',
@@ -16,22 +17,67 @@ export const deleteGoal = goalToRemove => ({
   goalToRemove
 });
 
-export const getQuote = quote => ({
+export const getQuote = quoteArray => ({
   type: 'GET_QUOTE',
-  quote
+  quoteArray
 });
+
+export const quoteDB = quotesDBArray => ({
+  type: 'QUOTES_DB',
+  quotesDBArray
+});
+
+export const getArticles = articles => ({
+  type: 'GET_ARTICLES',
+  articles
+});
+
+export const retrieveArticles = () => dispatch => {
+  fetch('https://newsapi.org/v1/articles?source=national-geographic&sortBy=top', {
+    method: 'GET',
+    headers: {
+      "Accept": "application/json",
+      'X-Api-Key': newsKey
+    }
+  })
+    .then(response => response.json())
+    .then(parsedResponse => dispatch(getArticles(parsedResponse.articles)));
+};
+
+export const retrieveQuoteDB = () => dispatch => {
+  const quoteRef = firebase.database().ref('quotes');
+  quoteRef.on('value', (snapshot) => {
+    const quotes = snapshot.val();
+    let newState = [];
+    for (let quote in quotes) {
+      newState.push({
+        id: quote,
+        author: quotes[quote].contents.author,
+        quote: quotes[quote].contents.quote
+      });
+    }
+    // const newState = Object.entries(goals).map(([key, value]) => Object.assign({}, value, {id: key}))
+    dispatch(quoteDB(newState));
+  });
+};
 
 export const retrieveQuote = () => dispatch => {
   fetch('http://quotes.rest/quote/random/', {
     method: 'GET',
     headers: {
       "Accept": "application/json",
-      "X-TheySaidSo-Api-Secret": apiKey
+      "X-TheySaidSo-Api-Secret": quotesApiKey
     }
   })
     .then(response => response.json())
-    .then(parsedResponse => dispatch(getQuote(parsedResponse)))
-    .catch(err => err);
+    .then(parsedResponse => dispatch(addQuote(parsedResponse)))
+    .catch(error => error);
+};
+
+export const addQuote = quote => dispatch => {
+  const quoteRef = firebase.database().ref('quotes');
+  quoteRef.push(quote);
+  dispatch(getQuote(quote));
 };
 
 export const addGoal = goal => dispatch => {

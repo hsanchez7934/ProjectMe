@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { retrieveQuote } from '../../actions';
+import { retrieveQuote, retrieveQuoteDB } from '../../actions';
 import { connect } from 'react-redux';
 
 class Hero extends Component {
-  constructor() {
-    super();
+
+  componentDidMount() {
+    // this.props.retrieveQuote();
+    this.props.retrieveQuoteDB();
   }
 
   render(){
     return (
       <div>
-        
+        {
+          this.props.quotesDB.map(quote => {
+            return (
+              <div>
+                <p>{quote.quote}</p>
+                <p>{quote.author}</p>
+              </div>
+            )
+          })
+        }
       </div>
     );
   }
 }
 
+Hero.propTypes = {
+  retrieveQuote: PropTypes.func,
+  retrieveQuoteDB: PropTypes.func
+};
+
 const mapStateToProps = store => ({
-  quote: store.quote
+  quote: store.quote,
+  quotesDB: store.quotesDB
 });
 
 const mapDispatchToProps = dispatch => ({
-  retrieveQuote: () => dispatch(retrieveQuote())
+  retrieveQuote: () => dispatch(retrieveQuote()),
+  retrieveQuoteDB: () => dispatch(retrieveQuoteDB())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hero);

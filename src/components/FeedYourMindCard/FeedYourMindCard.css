@@ -1,0 +1,29 @@
+.info-card {
+  border: 1px solid black;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 550px;
+  min-width: 430px;
+  margin: 0px 40px 0px 0px;
+  background-color: purple; }
+
+.info-card-image-container {
+  height: 65%; }
+
+.info-card-image {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 30px; }
+
+.info-card-title {
+  text-align: center;
+  background-color: magenta;
+  margin: 0px 0px 0px 0px;
+  padding: 20px 10px; }
+
+.info-card-body-container {
+  background-color: pink;
+  display: none; }
+
+.info-card-body {
+  margin: 0; }

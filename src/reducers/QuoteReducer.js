@@ -1,7 +1,7 @@
 const quote = (state = [], action) => {
-  switch (action.type){
+  switch (action.type) {
   case 'GET_QUOTE':
-    return [...state, action.quote];
+    return action.quoteArray;
   default:
     return state;
   }

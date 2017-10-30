@@ -1,7 +1,6 @@
 .info-card-container {
-  border: 1px solid blue;
-  height: 100vh;
+  background-color: #4d4e4f;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 20px;
   overflow-x: scroll; }

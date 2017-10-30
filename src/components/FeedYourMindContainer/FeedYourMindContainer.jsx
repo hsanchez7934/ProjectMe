@@ -3,52 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { retrieveArticles } from '../../actions';
 import FeedYourMindCard from '../FeedYourMindCard/FeedYourMindCard.jsx';
+import DropDownControls from '../DropDownControls/DropDownControls.jsx';
 import './FeedYourMindContainer.css';
 
 class FeedYourMindContainer extends Component {
 
-  componentDidMount() {
-    this.props.retrieveArticles();
-  }
-
   createCards = () => {
-    const array = [
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      }
-    ]
     const { articles } = this.props;
     return articles.map( (article, index) =>
       <FeedYourMindCard article={article} key={index} />);
@@ -57,6 +17,7 @@ class FeedYourMindContainer extends Component {
   render() {
     return (
       <section className='info-card-container'>
+        <DropDownControls retrieveArticles={this.props.retrieveArticles} />
         {
           this.createCards()
         }
@@ -75,7 +36,7 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  retrieveArticles: () => dispatch(retrieveArticles())
+  retrieveArticles: (query) => dispatch(retrieveArticles(query))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeedYourMindContainer);

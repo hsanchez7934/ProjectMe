@@ -5,6 +5,7 @@ import GoalCardContainer from '../GoalCardContainer/GoalCardContainer.jsx';
 import FeedYourMindContainer from '../FeedYourMindContainer/FeedYourMindContainer.jsx';
 import Hero from '../Hero/Hero.jsx';
 import newsKey from '../../newskey.js';
+import './App.css';
 
 class App extends Component {
 
@@ -15,9 +16,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Hero />
+        {/* <Hero />
         <Controls />
-        <GoalCardContainer />
+        <GoalCardContainer /> */}
         <FeedYourMindContainer />
       </div>
     );

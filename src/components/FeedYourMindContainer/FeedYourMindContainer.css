@@ -1,7 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Petit+Formal+Script);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 .info-card-container {
-  border: 1px solid blue;
-  height: 100vh;
+  background-color: #f4f4f4;
   display: flex;
-  flex-direction: row;
-  padding: 20px;
-  overflow-x: scroll; }
+  flex-direction: column;
+  padding: 0px; }
+  .info-card-container .feed-your-mind-header {
+    background-image: url(../../assets/mindhero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    height: 650px; }
+    .info-card-container .feed-your-mind-header .header-top-section {
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .info-card-container .feed-your-mind-header .header-top-section .feed-your-mind-title {
+        color: #c0b283;
+        margin: 130px 0px 0px 0px;
+        text-align: center;
+        font-family: "Petit Formal Script", cursive;
+        font-size: 5em;
+        animation-name: showup;
+        animation-duration: 1s; }
+    .info-card-container .feed-your-mind-header .header-bottom-section {
+      height: 50%; }
+      .info-card-container .feed-your-mind-header .header-bottom-section .feed-your-mind-quote {
+        color: #f4f4f4;
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 30px 0px 30px;
+        text-align: center;
+        animation-name: slidein;
+        animation-duration: 5s;
+        overflow-x: scroll;
+        overflow-y: scroll; }
+      .info-card-container .feed-your-mind-header .header-bottom-section .feed-your-mind-quote-author {
+        color: #f4f4f4;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        margin: 30px 0px 0px 0px;
+        text-align: center;
+        animation-name: slidein;
+        animation-duration: 5s; }
+  .info-card-container .card-container {
+    display: flex;
+    overflow-x: scroll;
+    background: linear-gradient(0deg, #373737, #f4f4f4 70%); }
+
+@keyframes slidein {
+  from {
+    margin-left: 90%;
+    width: 100%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
+
+@keyframes showup {
+  0% {
+    opacity: 0.1; }
+  10% {
+    opacity: 0.2; }
+  20% {
+    opacity: 0.3; }
+  30% {
+    opacity: 0.4; }
+  40% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.6; }
+  60% {
+    opacity: 0.7; }
+  70% {
+    opacity: 0.8; }
+  80% {
+    opacity: 0.9; }
+  100% {
+    opacity: 1; } }

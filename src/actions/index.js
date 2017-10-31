@@ -32,8 +32,8 @@ export const getArticles = articles => ({
   articles
 });
 
-export const retrieveArticles = () => dispatch => {
-  fetch('https://newsapi.org/v1/articles?source=national-geographic&sortBy=top', {
+export const retrieveArticles = query => dispatch => {
+  fetch(`https://newsapi.org/v1/articles?source=${query}&sortBy=top`, {
     method: 'GET',
     headers: {
       "Accept": "application/json",
@@ -41,7 +41,8 @@ export const retrieveArticles = () => dispatch => {
     }
   })
     .then(response => response.json())
-    .then(parsedResponse => dispatch(getArticles(parsedResponse.articles)));
+    .then(parsedResponse => dispatch(getArticles(parsedResponse.articles)))
+    .catch(error => error);
 };
 
 export const retrieveQuoteDB = () => dispatch => {
@@ -70,7 +71,7 @@ export const retrieveQuote = () => dispatch => {
     }
   })
     .then(response => response.json())
-    .then(parsedResponse => dispatch(addQuote(parsedResponse)))
+    .then(parsedResponse => dispatch(getQuote(parsedResponse.contents)))
     .catch(error => error);
 };
 

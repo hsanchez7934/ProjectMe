@@ -1,1 +1,25 @@
+@import "../../styles/petitfont.scss";
+@import "../../styles/colors.scss";
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: none;
+  background-color: $paper;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

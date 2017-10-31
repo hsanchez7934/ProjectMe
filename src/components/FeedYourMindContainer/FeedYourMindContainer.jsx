@@ -1,65 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { retrieveArticles } from '../../actions';
+import { retrieveArticles, retrieveQuote } from '../../actions';
 import FeedYourMindCard from '../FeedYourMindCard/FeedYourMindCard.jsx';
+import DropDownControls from '../DropDownControls/DropDownControls.jsx';
 import './FeedYourMindContainer.css';
 
 class FeedYourMindContainer extends Component {
 
   componentDidMount() {
-    this.props.retrieveArticles();
+    this.props.retrieveQuote();
   }
 
   createCards = () => {
-    const array = [
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      },
-      {
-        title: `yo thats where it happens bro`,
-        description:`get it how we want it you littler
-                      bitches just done know nigga`,
-        url: '#',
-        urlToImage: '3'
-      }
-    ]
     const { articles } = this.props;
     return articles.map( (article, index) =>
       <FeedYourMindCard article={article} key={index} />);
   }
 
   render() {
+    const { retrieveArticles, quote } = this.props;
     return (
       <section className='info-card-container'>
-        {
-          this.createCards()
-        }
+        <header className='feed-your-mind-header'>
+          <section className='header-top-section'>
+            <h1 className='feed-your-mind-title'>Feed Your Mind</h1>
+          </section>
+
+          <section className='header-bottom-section'>
+            <p className='feed-your-mind-quote'>{quote.quote}</p>
+            <p className='feed-your-mind-quote-author'>{quote.author}</p>
+          </section>
+        </header>
+        <DropDownControls retrieveArticles={retrieveArticles} />
+        <section className='card-container'>
+          {
+            this.createCards()
+          }
+        </section>
       </section>
     );
   }
@@ -67,15 +45,19 @@ class FeedYourMindContainer extends Component {
 
 FeedYourMindContainer.propTypes = {
   retrieveArticles: PropTypes.func,
-  articles: PropTypes.array
+  articles: PropTypes.array,
+  retrieveQuote: PropTypes.func,
+  quote: PropTypes.object
 };
 
 const mapStateToProps = store => ({
-  articles: store.articles
+  articles: store.articles,
+  quote: store.quote
 });
 
 const mapDispatchToProps = dispatch => ({
-  retrieveArticles: () => dispatch(retrieveArticles())
+  retrieveArticles: (query) => dispatch(retrieveArticles(query)),
+  retrieveQuote: () => dispatch(retrieveQuote())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeedYourMindContainer);

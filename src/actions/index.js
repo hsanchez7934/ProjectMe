@@ -71,7 +71,7 @@ export const retrieveQuote = () => dispatch => {
     }
   })
     .then(response => response.json())
-    .then(parsedResponse => dispatch(addQuote(parsedResponse)))
+    .then(parsedResponse => dispatch(getQuote(parsedResponse.contents)))
     .catch(error => error);
 };
 

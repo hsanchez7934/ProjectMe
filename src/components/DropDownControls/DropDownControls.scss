@@ -1,99 +1,94 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-$open-sans: 'Open Sans', sans-serif;
-
-.hidden {
-  display: none;
-}
+@import "../../styles/opensans.scss";
+@import "../../styles/colors.scss";
 
 .options-list-container {
-  // background-color: magenta;
   width: 100vw;
-}
-
-.options-list-reveal {
-  background-color: pink;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
-.options-list:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.cs-placeholder-container {
-  // background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
-}
-
-.cs-placeholder {
-  display: block;
-  // background-color: white;
-  text-align: center;
-  color: white;
-  font-size: 25px;
-  width: 400px;
-  margin: 0px auto;
-  padding: 30px 0px;
-}
-
-.cs-placeholder:hover {
-  cursor: pointer;
-  color: blue;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin: 20px 0px;
-  font-size: 20px;
   font-family: $open-sans;
-}
-
-li:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.left-side-options {
-  float: left;
-  background-color: green;
-  width: 50%;
-  text-align: right;
-  list-style: none;
-  padding-right: 30px;
-}
-
-.right-side-options {
-  float: right;
-  background-color: red;
-  width: 50%;
-  text-align: left;
-  list-style: none;
-  padding-left: 30px;
-}
-
-.news-submit-button {
-  height: 40px;
-  width: 140px;
-  border-right: 3px solid black;
-  border-left: 3px solid black;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  background-color: inherit;
-  color: white;
-  border-radius: 10px;
-  font-size: 18px;
-}
-
-.news-submit-button:hover {
-  background-color: black;
-  opacity: 0.8;
+  .cs-placeholder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    .cs-placeholder {
+      display: block;
+      text-align: center;
+      color: $palegold;
+      font-size: 25px;
+      width: 400px;
+      margin: 0px auto;
+      padding: 10px 0px 0px 0px;
+      border: 1px solid black;
+      margin: 50px 0px 0px 0px;
+      background-color: $black;
+      height: 70px;
+      img {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        top: 5px;
+        left: 30px;
+      }
+    }
+    .cs-placeholder:hover {
+      cursor: pointer;
+      background-color: $palegold;
+      color: $charcoal;
+    }
+    .news-submit-button {
+      height: 40px;
+      width: 140px;
+      background-color: inherit;
+      color: $palegold;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-top: 35px;
+      background-color: $black;
+      border-width: 0px;
+    }
+    .news-submit-button:hover {
+      background-color: $palegold;
+      color: $charcoal;
+      cursor: pointer;
+      border: 1px solid $charcoal;
+    }
+    .news-submit-button:focus {
+      outline: none;
+    }
+  }
+  .options-list-reveal {
+    margin: 0;
+    padding: 0;
+    background-color: $black;
+    width: 400px;
+    height: 200px;
+    overflow: scroll;
+    ul {
+      padding: 0;
+      margin: 0;
+      background-color: $black;
+      opacity: 0.9;
+      li {
+        margin: 0;
+        padding: 10px 0px 10px 0px;
+        font-size: 20px;
+        color: $paper;
+        font-weight: lighter;
+        text-align: center;
+      }
+      li:hover {
+        color: $charcoal;
+        cursor: pointer;
+        background-color: $palegold;
+        font-weight: 600;
+      }
+    }
+  }
+  .options-list:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .hidden {
+    display: none;
+  }
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './DropDownControls.css';
 import articlesAPIArray from '../../utilitiesData/articlesAPIArray.js';
+import dropdown from '../../assets/dropdown.svg';
+import dropdownhover from '../../assets/dropdownhover.svg';
 
 export default class DropDownControls extends Component {
   constructor() {
@@ -9,8 +11,21 @@ export default class DropDownControls extends Component {
     this.state = {
       query: 'abc-news-au',
       menuClass: 'hidden',
-      placeholder: 'Choose your option'
+      placeholder: 'Choose your option',
+      dropdown: dropdown
     };
+  }
+
+  onMouseIn = () => {
+    this.setState({
+      dropdown: dropdownhover
+    });
+  }
+
+  onMouseOut = () => {
+    this.setState({
+      dropdown: dropdown
+    });
   }
 
   renderListItems = array => (
@@ -56,34 +71,33 @@ export default class DropDownControls extends Component {
   }
 
   render() {
+    const { placeholder, dropdown, menuClass } = this.state;
     return (
       <section className='options-list-container'>
 
         <section className='cs-placeholder-container'>
           <p
             className='cs-placeholder'
-            onClick={() => this.revealClass()}>
-            {this.state.placeholder}
+            onClick={() => this.revealClass()}
+            onMouseEnter={() => this.onMouseIn()}
+            onMouseLeave={() => this.onMouseOut()}>
+            {placeholder}
+            <img src={dropdown} alt='Drop down menu icon.' />
           </p>
+
+          <section className={menuClass}>
+            <ul>
+              {
+                this.renderListItems(articlesAPIArray)
+              }
+            </ul>
+          </section>
+
           <button
             className='news-submit-button'
             onClick={() => this.articlesFetch()}>
             Submit
           </button>
-        </section>
-
-        <section className={this.state.menuClass}>
-          <ul className='left-side-options'>
-            {
-              this.renderListItems(articlesAPIArray[0])
-            }
-          </ul>
-
-          <ul className='right-side-options'>
-            {
-              this.renderListItems(articlesAPIArray[1])
-            }
-          </ul>
         </section>
 
       </section>

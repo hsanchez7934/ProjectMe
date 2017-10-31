@@ -1,16 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-
-$white: #fff;
-$black: #000;
-$hover: #59e5c2;
-$open-sans: 'Open Sans', sans-serif;
+@import "../../styles/opensans.scss";
+@import "../../styles/colors.scss";
 
 .card {
   float: left;
   padding: 0 1.7rem;
   min-width: 400px;
   height: 550px;
-  color: $white;
+  color: $paper;
+  margin-bottom: 30px;
   .wrapper {
     min-height: 540px;
     position: relative;
@@ -41,6 +38,7 @@ $open-sans: 'Open Sans', sans-serif;
           font-family: $open-sans;
           font-weight: 300;
           margin-top: 10px;
+          overflow: scroll;
         }
         .card-description {
           height: 70px;
@@ -53,13 +51,13 @@ $open-sans: 'Open Sans', sans-serif;
           text-decoration: none;
           display: block;
           padding-top: 10px;
-          color: $white;
+          color: $silk;
           font-family: $open-sans;
         }
         a:hover {
           text-decoration: underline;
           font-weight: 600;
-          color: $hover;
+          color: $palegold;
         }
     }
   }

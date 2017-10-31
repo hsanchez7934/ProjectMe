@@ -4,7 +4,8 @@
   padding: 0 1.7rem;
   min-width: 400px;
   height: 550px;
-  color: #fff; }
+  color: #f4f4f4;
+  margin-bottom: 30px; }
   .card .wrapper {
     min-height: 540px;
     position: relative;
@@ -30,7 +31,8 @@
       .card .data .content .card-title {
         font-family: "Open Sans", sans-serif;
         font-weight: 300;
-        margin-top: 10px; }
+        margin-top: 10px;
+        overflow: scroll; }
       .card .data .content .card-description {
         height: 70px;
         margin: 0px 0px 0px 0px;
@@ -41,9 +43,9 @@
         text-decoration: none;
         display: block;
         padding-top: 10px;
-        color: #fff;
+        color: #dcd0c0;
         font-family: "Open Sans", sans-serif; }
       .card .data .content a:hover {
         text-decoration: underline;
         font-weight: 600;
-        color: #59e5c2; }
+        color: #c0b283; }

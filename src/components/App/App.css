@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Petit+Formal+Script);
 * {
   box-sizing: border-box; }
 
@@ -8,4 +9,11 @@ html {
 body {
   height: 100%;
   width: 100%;
-  margin: none; }
+  margin: none;
+  background-color: #f4f4f4; }
+
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }

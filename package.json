@@ -13,7 +13,8 @@
     "react-router": "^4.2.0",
     "react-router-redux": "^4.0.8",
     "react-scripts": "1.0.14",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "victory": "^0.24.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

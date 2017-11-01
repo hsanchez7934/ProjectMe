@@ -1,0 +1,47 @@
+@import "../../styles/opensans.scss";
+@import "../../styles/colors.scss";
+
+
+.graphs-container-header {
+  
+}
+
+.graphs-container {
+  padding: 0;
+  margin: 0;
+}
+
+.bar-graph {
+  height: 700px;
+  width: 100%;
+  background-color: $paper;
+  // border: 1px solid black;
+  // padding-bottom: 70px;
+  font-family: $open-sans;
+  color: $charcoal;
+}
+
+
+.graph-container {
+  // background-color: pink;
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title-description-container {
+  // background-color: magenta;
+  height: 20%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.data-title {
+  text-align: center;
+}
+
+.data-description {
+  text-align: center;
+  // background-color: pink;
+  // width:
+}

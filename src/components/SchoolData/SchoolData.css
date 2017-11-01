@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+.graphs-container {
+  padding: 0;
+  margin: 0; }
+
+.bar-graph {
+  height: 700px;
+  width: 100%;
+  background-color: #f4f4f4;
+  font-family: "Open Sans", sans-serif;
+  color: #373737; }
+
+.graph-container {
+  height: 80%;
+  width: 80%;
+  margin: 0 auto; }
+
+.title-description-container {
+  height: 20%;
+  width: 70%;
+  margin: 0 auto; }
+
+.data-title {
+  text-align: center; }
+
+.data-description {
+  text-align: center; }

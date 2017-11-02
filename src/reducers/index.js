@@ -1,14 +1,18 @@
 import { combineReducers } from 'redux';
 import goal from './GoalReducer';
 import quote from './QuoteReducer';
-import quotesDB from './QuotesDBReducer';
 import articles from './ArticlesReducer';
+import dropOutData from './DropOutDataReducer';
+import collegeEnrollmentData from './CollegeEnrollmentDataReducer';
+import disconnectedYouthData from './DisconnectedYouthDataReducer';
 
 const rootReducer = combineReducers({
   goal,
   quote,
-  quotesDB,
-  articles
+  articles,
+  dropOutData,
+  collegeEnrollmentData,
+  disconnectedYouthData
 });
 
 export default rootReducer;

@@ -7,21 +7,12 @@ class Hero extends Component {
 
   componentDidMount() {
     // this.props.retrieveQuote();
-    this.props.retrieveQuoteDB();
   }
 
   render(){
     return (
       <div>
         {
-          this.props.quotesDB.map(quote => {
-            return (
-              <div>
-                <p>{quote.quote}</p>
-                <p>{quote.author}</p>
-              </div>
-            )
-          })
         }
       </div>
     );
@@ -29,18 +20,15 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  retrieveQuote: PropTypes.func,
-  retrieveQuoteDB: PropTypes.func
+  retrieveQuote: PropTypes.func
 };
 
 const mapStateToProps = store => ({
-  quote: store.quote,
-  quotesDB: store.quotesDB
+  quote: store.quote
 });
 
 const mapDispatchToProps = dispatch => ({
-  retrieveQuote: () => dispatch(retrieveQuote()),
-  retrieveQuoteDB: () => dispatch(retrieveQuoteDB())
+  retrieveQuote: () => dispatch(retrieveQuote())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hero);

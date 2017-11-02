@@ -1,6 +1,7 @@
 import firebase from '../firebase.js';
 import quotesApiKey from '../quoteskey.js';
 import newsKey from '../newskey.js';
+import govKey from '../govkey.js';
 
 export const createGoal = goal => ({
   type: 'ADD_GOAL',
@@ -17,20 +18,58 @@ export const deleteGoal = goalToRemove => ({
   goalToRemove
 });
 
-export const getQuote = quoteArray => ({
+export const getQuote = quote => ({
   type: 'GET_QUOTE',
-  quoteArray
+  quote
 });
 
-export const quoteDB = quotesDBArray => ({
-  type: 'QUOTES_DB',
-  quotesDBArray
-});
 
 export const getArticles = articles => ({
   type: 'GET_ARTICLES',
   articles
 });
+
+export const dropOutData = dropOutDataArray => ({
+  type: 'GET_DROP_OUT_DATA',
+  dropOutDataArray
+});
+
+export const collegeEnrollmentData = collegeEnrollmentDataArray => ({
+  type: 'GET_COLLEGE_ENROLLMENT_DATA',
+  collegeEnrollmentDataArray
+});
+
+export const disconnectedYouthData = disconnectedYouthDataArray => ({
+  type: 'GET_DISCONNECTED_YOUTH_DATA',
+  disconnectedYouthDataArray
+});
+
+export const fetchDropOutData = () => dispatch => {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = `https://api.ed.gov/data/mbk-highschool-dropout?api_key=${govKey}`;
+  fetch(proxyurl + url)
+    .then(response => response.json())
+    .then(res => dispatch(dropOutData(cleanArray(res.resources, 5))))
+    .catch(error => error);
+};
+
+export const fetchCollegeEnrollmentData = () => dispatch => {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = `https://api.ed.gov/data/mbk-college-enrollment?api_key=${govKey}`;
+  fetch(proxyurl + url)
+    .then(response => response.json())
+    .then(res => dispatch(collegeEnrollmentData(cleanArray(res.resources, 6))))
+    .catch(error => error);
+};
+
+export const fetchDisconnectedYouthData = () => dispatch => {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = `https://api.ed.gov/data/mbk-disconnected-youth?api_key=${govKey}`;
+  fetch(proxyurl + url)
+    .then(response => response.json())
+    .then(res => dispatch(disconnectedYouthData(cleanArray(res.resources, 5))))
+    .catch(error => error);
+};
 
 export const retrieveArticles = query => dispatch => {
   fetch(`https://newsapi.org/v1/articles?source=${query}&sortBy=top`, {
@@ -43,23 +82,6 @@ export const retrieveArticles = query => dispatch => {
     .then(response => response.json())
     .then(parsedResponse => dispatch(getArticles(parsedResponse.articles)))
     .catch(error => error);
-};
-
-export const retrieveQuoteDB = () => dispatch => {
-  const quoteRef = firebase.database().ref('quotes');
-  quoteRef.on('value', (snapshot) => {
-    const quotes = snapshot.val();
-    let newState = [];
-    for (let quote in quotes) {
-      newState.push({
-        id: quote,
-        author: quotes[quote].contents.author,
-        quote: quotes[quote].contents.quote
-      });
-    }
-    // const newState = Object.entries(goals).map(([key, value]) => Object.assign({}, value, {id: key}))
-    dispatch(quoteDB(newState));
-  });
 };
 
 export const retrieveQuote = () => dispatch => {
@@ -109,4 +131,16 @@ export const removeGoal = goalId => dispatch => {
   const goalRef = firebase.database().ref(`/goals/${goalId}`);
   goalRef.remove();
   dispatch(deleteGoal(goalId));
+};
+
+const cleanArray = (array, limit) => {
+  let tempArr = [];
+  for (let i = 0; i < array.length - limit; i++) {
+    let object = Object.assign({
+      year: array[i].Year,
+      percentage: parseFloat(array[i].Percentage)
+    });
+    tempArr.push(object);
+  }
+  return tempArr;
 };

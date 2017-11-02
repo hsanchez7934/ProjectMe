@@ -1,18 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+.school-data-prelude {
+  color: #373737; }
+
+.my-brothers-keeper {
+  text-align: center;
+  margin: 40px auto;
+  width: 70%; }
+
+.my-brothers-keeper-text {
+  text-align: center;
+  padding: 0px 0px 80px 0px;
+  margin: 0 auto;
+  width: 70%;
+  border-bottom: 1px solid #373737; }
+
+.school-data-title {
+  margin: 0;
+  color: #f4f4f4;
+  opacity: 0.8; }
+
+.graphs-container-header {
+  background-image: url(../../assets/schooldatahero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; }
+
 .graphs-container {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Open Sans", sans-serif; }
 
 .bar-graph {
   height: 700px;
   width: 100%;
   background-color: #f4f4f4;
-  font-family: "Open Sans", sans-serif;
+  margin: 80px 0px;
   color: #373737; }
 
 .graph-container {
   height: 80%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 .title-description-container {
@@ -21,7 +54,8 @@
   margin: 0 auto; }
 
 .data-title {
-  text-align: center; }
+  text-align: center;
+  font-size: 21px; }
 
 .data-description {
   text-align: center; }

@@ -1,47 +1,64 @@
 @import "../../styles/opensans.scss";
 @import "../../styles/colors.scss";
 
-
-.graphs-container-header {
-  
-}
-
 .graphs-container {
   padding: 0;
   margin: 0;
-}
-
-.bar-graph {
-  height: 700px;
-  width: 100%;
-  background-color: $paper;
-  // border: 1px solid black;
-  // padding-bottom: 70px;
   font-family: $open-sans;
-  color: $charcoal;
-}
-
-
-.graph-container {
-  // background-color: pink;
-  height: 80%;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.title-description-container {
-  // background-color: magenta;
-  height: 20%;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.data-title {
-  text-align: center;
-}
-
-.data-description {
-  text-align: center;
-  // background-color: pink;
-  // width:
+  .graphs-container-header {
+    background-image: url(../../assets/schooldatahero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    .school-data-title {
+      margin: 0;
+      color: $paper;
+      opacity: 0.8;
+    }
+  }
+  .school-data-prelude {
+    color: $charcoal;
+    .my-brothers-keeper {
+      text-align: center;
+      margin: 40px auto;
+      width: 70%;
+    }
+    .my-brothers-keeper-text {
+      text-align: center;
+      padding: 0px 0px 80px 0px;
+      margin: 0 auto;
+      width: 70%;
+      border-bottom: 1px solid $charcoal;
+    }
+  }
+  .bar-graph {
+    height: 700px;
+    width: 100%;
+    background-color: $paper;
+    margin: 80px 0px;
+    color: $charcoal;
+    .title-description-container {
+      height: 20%;
+      width: 70%;
+      margin: 0 auto;
+      .data-title {
+        text-align: center;
+        font-size: 21px;
+      }
+      .data-description {
+        text-align: center;
+      }
+    }
+    .graph-container {
+      height: 80%;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
 }

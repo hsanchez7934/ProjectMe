@@ -1,0 +1,850 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoalCard unit testing should match snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <GoalCard
+    goal={
+      Object {
+        "body": "Go to gym",
+        "date": "November 6, 2017",
+        "id": "1234",
+        "time": "07:27:57",
+        "title": "Workout",
+      }
+    }
+    removeGoal={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "goal": Object {
+        "body": "Go to gym",
+        "date": "November 6, 2017",
+        "id": "1234",
+        "time": "07:27:57",
+        "title": "Workout",
+      },
+      "removeGoal": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <article
+        class="goal-card"
+        id="1234"
+      >
+        <section
+          class="card-left-side"
+        >
+          <section
+            class="goal-title-container"
+          >
+            <h3
+              class="goal-title"
+            >
+              Workout
+            </h3>
+          </section>
+          <section
+            class="goal-card-date-container"
+          >
+            <p
+              class="weekday"
+            />
+            <p
+              class="date"
+            >
+              November 6, 2017
+            </p>
+            <p
+              class="time"
+            >
+              07:27:57
+            </p>
+          </section>
+        </section>
+        <section
+          class="card-right-side"
+        >
+          <p
+            class="goal-description"
+          >
+            Go to gym
+          </p>
+          <button
+            class="delete-button"
+          >
+            Delete
+          </button>
+        </section>
+      </article>,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="card-left-side"
+          >
+            <section
+              className="goal-title-container"
+            >
+              <h3
+                className="goal-title"
+              >
+                Workout
+              </h3>
+            </section>
+            <section
+              className="goal-card-date-container"
+            >
+              <p
+                className="weekday"
+              />
+              <p
+                className="date"
+              >
+                November 6, 2017
+              </p>
+              <p
+                className="time"
+              >
+                07:27:57
+              </p>
+            </section>
+          </section>,
+          <section
+            className="card-right-side"
+          >
+            <p
+              className="goal-description"
+            >
+              Go to gym
+            </p>
+            <button
+              className="delete-button"
+              onClick={[Function]}
+            >
+              Delete
+            </button>
+          </section>,
+        ],
+        "className": "goal-card",
+        "id": "1234",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <section
+            class="card-left-side"
+          >
+            <section
+              class="goal-title-container"
+            >
+              <h3
+                class="goal-title"
+              >
+                Workout
+              </h3>
+            </section>
+            <section
+              class="goal-card-date-container"
+            >
+              <p
+                class="weekday"
+              />
+              <p
+                class="date"
+              >
+                November 6, 2017
+              </p>
+              <p
+                class="time"
+              >
+                07:27:57
+              </p>
+            </section>
+          </section>,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <section
+                className="goal-title-container"
+              >
+                <h3
+                  className="goal-title"
+                >
+                  Workout
+                </h3>
+              </section>,
+              <section
+                className="goal-card-date-container"
+              >
+                <p
+                  className="weekday"
+                />
+                <p
+                  className="date"
+                >
+                  November 6, 2017
+                </p>
+                <p
+                  className="time"
+                >
+                  07:27:57
+                </p>
+              </section>,
+            ],
+            "className": "card-left-side",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <section
+                class="goal-title-container"
+              >
+                <h3
+                  class="goal-title"
+                >
+                  Workout
+                </h3>
+              </section>,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3
+                  className="goal-title"
+                >
+                  Workout
+                </h3>,
+                "className": "goal-title-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <h3
+                    class="goal-title"
+                  >
+                    Workout
+                  </h3>,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Workout",
+                    "className": "goal-title",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Workout",
+                  ],
+                  "type": "h3",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": <section
+                class="goal-card-date-container"
+              >
+                <p
+                  class="weekday"
+                />
+                <p
+                  class="date"
+                >
+                  November 6, 2017
+                </p>
+                <p
+                  class="time"
+                >
+                  07:27:57
+                </p>
+              </section>,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="weekday"
+                  />,
+                  <p
+                    className="date"
+                  >
+                    November 6, 2017
+                  </p>,
+                  <p
+                    className="time"
+                  >
+                    07:27:57
+                  </p>,
+                ],
+                "className": "goal-card-date-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <p
+                    class="weekday"
+                  />,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "weekday",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": <p
+                    class="date"
+                  >
+                    November 6, 2017
+                  </p>,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "November 6, 2017",
+                    "className": "date",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "November 6, 2017",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": <p
+                    class="time"
+                  >
+                    07:27:57
+                  </p>,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "07:27:57",
+                    "className": "time",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "07:27:57",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "section",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": <section
+            class="card-right-side"
+          >
+            <p
+              class="goal-description"
+            >
+              Go to gym
+            </p>
+            <button
+              class="delete-button"
+            >
+              Delete
+            </button>
+          </section>,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="goal-description"
+              >
+                Go to gym
+              </p>,
+              <button
+                className="delete-button"
+                onClick={[Function]}
+              >
+                Delete
+              </button>,
+            ],
+            "className": "card-right-side",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <p
+                class="goal-description"
+              >
+                Go to gym
+              </p>,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Go to gym",
+                "className": "goal-description",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Go to gym",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": <button
+                class="delete-button"
+              >
+                Delete
+              </button>,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Delete",
+                "className": "delete-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Delete",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "article",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "goal": Object {
+          "body": "Go to gym",
+          "date": "November 6, 2017",
+          "id": "1234",
+          "time": "07:27:57",
+          "title": "Workout",
+        },
+        "removeGoal": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <article
+          class="goal-card"
+          id="1234"
+        >
+          <section
+            class="card-left-side"
+          >
+            <section
+              class="goal-title-container"
+            >
+              <h3
+                class="goal-title"
+              >
+                Workout
+              </h3>
+            </section>
+            <section
+              class="goal-card-date-container"
+            >
+              <p
+                class="weekday"
+              />
+              <p
+                class="date"
+              >
+                November 6, 2017
+              </p>
+              <p
+                class="time"
+              >
+                07:27:57
+              </p>
+            </section>
+          </section>
+          <section
+            class="card-right-side"
+          >
+            <p
+              class="goal-description"
+            >
+              Go to gym
+            </p>
+            <button
+              class="delete-button"
+            >
+              Delete
+            </button>
+          </section>
+        </article>,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <section
+              className="card-left-side"
+            >
+              <section
+                className="goal-title-container"
+              >
+                <h3
+                  className="goal-title"
+                >
+                  Workout
+                </h3>
+              </section>
+              <section
+                className="goal-card-date-container"
+              >
+                <p
+                  className="weekday"
+                />
+                <p
+                  className="date"
+                >
+                  November 6, 2017
+                </p>
+                <p
+                  className="time"
+                >
+                  07:27:57
+                </p>
+              </section>
+            </section>,
+            <section
+              className="card-right-side"
+            >
+              <p
+                className="goal-description"
+              >
+                Go to gym
+              </p>
+              <button
+                className="delete-button"
+                onClick={[Function]}
+              >
+                Delete
+              </button>
+            </section>,
+          ],
+          "className": "goal-card",
+          "id": "1234",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <section
+              class="card-left-side"
+            >
+              <section
+                class="goal-title-container"
+              >
+                <h3
+                  class="goal-title"
+                >
+                  Workout
+                </h3>
+              </section>
+              <section
+                class="goal-card-date-container"
+              >
+                <p
+                  class="weekday"
+                />
+                <p
+                  class="date"
+                >
+                  November 6, 2017
+                </p>
+                <p
+                  class="time"
+                >
+                  07:27:57
+                </p>
+              </section>
+            </section>,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <section
+                  className="goal-title-container"
+                >
+                  <h3
+                    className="goal-title"
+                  >
+                    Workout
+                  </h3>
+                </section>,
+                <section
+                  className="goal-card-date-container"
+                >
+                  <p
+                    className="weekday"
+                  />
+                  <p
+                    className="date"
+                  >
+                    November 6, 2017
+                  </p>
+                  <p
+                    className="time"
+                  >
+                    07:27:57
+                  </p>
+                </section>,
+              ],
+              "className": "card-left-side",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <section
+                  class="goal-title-container"
+                >
+                  <h3
+                    class="goal-title"
+                  >
+                    Workout
+                  </h3>
+                </section>,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h3
+                    className="goal-title"
+                  >
+                    Workout
+                  </h3>,
+                  "className": "goal-title-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <h3
+                      class="goal-title"
+                    >
+                      Workout
+                    </h3>,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Workout",
+                      "className": "goal-title",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Workout",
+                    ],
+                    "type": "h3",
+                  },
+                ],
+                "type": "section",
+              },
+              Object {
+                "instance": <section
+                  class="goal-card-date-container"
+                >
+                  <p
+                    class="weekday"
+                  />
+                  <p
+                    class="date"
+                  >
+                    November 6, 2017
+                  </p>
+                  <p
+                    class="time"
+                  >
+                    07:27:57
+                  </p>
+                </section>,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="weekday"
+                    />,
+                    <p
+                      className="date"
+                    >
+                      November 6, 2017
+                    </p>,
+                    <p
+                      className="time"
+                    >
+                      07:27:57
+                    </p>,
+                  ],
+                  "className": "goal-card-date-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <p
+                      class="weekday"
+                    />,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "weekday",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": <p
+                      class="date"
+                    >
+                      November 6, 2017
+                    </p>,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "November 6, 2017",
+                      "className": "date",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "November 6, 2017",
+                    ],
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": <p
+                      class="time"
+                    >
+                      07:27:57
+                    </p>,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "07:27:57",
+                      "className": "time",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "07:27:57",
+                    ],
+                    "type": "p",
+                  },
+                ],
+                "type": "section",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": <section
+              class="card-right-side"
+            >
+              <p
+                class="goal-description"
+              >
+                Go to gym
+              </p>
+              <button
+                class="delete-button"
+              >
+                Delete
+              </button>
+            </section>,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="goal-description"
+                >
+                  Go to gym
+                </p>,
+                <button
+                  className="delete-button"
+                  onClick={[Function]}
+                >
+                  Delete
+                </button>,
+              ],
+              "className": "card-right-side",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <p
+                  class="goal-description"
+                >
+                  Go to gym
+                </p>,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Go to gym",
+                  "className": "goal-description",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Go to gym",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": <button
+                  class="delete-button"
+                >
+                  Delete
+                </button>,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Delete",
+                  "className": "delete-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Delete",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "article",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

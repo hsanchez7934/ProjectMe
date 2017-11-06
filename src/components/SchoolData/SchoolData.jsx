@@ -4,12 +4,13 @@ import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
 import './SchoolData.css';
 import govKey from '../../govkey.js';
 import { connect } from 'react-redux';
-import { fetchDropOutData, fetchCollegeEnrollmentData, fetchDisconnectedYouthData } from '../../actions';
+import {
+  fetchDropOutData,
+  fetchCollegeEnrollmentData,
+  fetchDisconnectedYouthData
+} from '../../actions';
 
 class SchoolData extends Component {
-  constructor() {
-    super();
-  }
 
   componentDidMount() {
     this.props.fetchDropOutData();
@@ -43,7 +44,11 @@ class SchoolData extends Component {
 
 
   render() {
-    const { dropOutDataArray, collegeEnrollmentDataArray, disconnectedYouthDataArray } = this.props;
+    const {
+      dropOutDataArray,
+      collegeEnrollmentDataArray,
+      disconnectedYouthDataArray
+    } = this.props;
     return (
       <section className='graphs-container'>
         <header className='graphs-container-header'>

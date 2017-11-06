@@ -2,6 +2,7 @@ import firebase from '../firebase.js';
 import quotesApiKey from '../quoteskey.js';
 import newsKey from '../newskey.js';
 import govKey from '../govkey.js';
+import { cleanArray } from '../utilitiesData/helperFunctions.js';
 
 export const createGoal = goal => ({
   type: 'ADD_GOAL',
@@ -22,7 +23,6 @@ export const getQuote = quote => ({
   type: 'GET_QUOTE',
   quote
 });
-
 
 export const getArticles = articles => ({
   type: 'GET_ARTICLES',
@@ -97,18 +97,11 @@ export const retrieveQuote = () => dispatch => {
     .catch(error => error);
 };
 
-export const addQuote = quote => dispatch => {
-  const quoteRef = firebase.database().ref('quotes');
-  quoteRef.push(quote);
-  dispatch(getQuote(quote));
-};
-
 export const addGoal = goal => dispatch => {
   const goalRef = firebase.database().ref('goals');
   goalRef.push(goal);
   dispatch(createGoal(goal));
 };
-
 
 export const retrieveGoals = () => dispatch => {
   const goalRef = firebase.database().ref('goals');
@@ -116,10 +109,13 @@ export const retrieveGoals = () => dispatch => {
     const goals = snapshot.val();
     let newState = [];
     for (let goal in goals) {
-      newState.push({
+      newState.unshift({
         id: goal,
         title: goals[goal].title,
-        body: goals[goal].body
+        body: goals[goal].body,
+        date: goals[goal].date,
+        day: goals[goal].day,
+        time: goals[goal].time
       });
     }
     // const newState = Object.entries(goals).map(([key, value]) => Object.assign({}, value, {id: key}))
@@ -131,16 +127,4 @@ export const removeGoal = goalId => dispatch => {
   const goalRef = firebase.database().ref(`/goals/${goalId}`);
   goalRef.remove();
   dispatch(deleteGoal(goalId));
-};
-
-const cleanArray = (array, limit) => {
-  let tempArr = [];
-  for (let i = 0; i < array.length - limit; i++) {
-    let object = Object.assign({
-      year: array[i].Year,
-      percentage: parseFloat(array[i].Percentage)
-    });
-    tempArr.push(object);
-  }
-  return tempArr;
 };

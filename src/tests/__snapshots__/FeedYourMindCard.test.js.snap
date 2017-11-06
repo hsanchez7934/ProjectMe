@@ -1,0 +1,770 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedYourMindCard units testing should match snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <FeedYourMindCard
+    article={
+      Object {
+        "author": "Sarah Gibbens",
+        "description": "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+        "publishedAt": "2017-11-02T21:39:08Z",
+        "title": "Endangered Siberian Tiger Returns From Exile",
+        "url": "https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html",
+        "urlToImage": "https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "article": Object {
+        "author": "Sarah Gibbens",
+        "description": "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+        "publishedAt": "2017-11-02T21:39:08Z",
+        "title": "Endangered Siberian Tiger Returns From Exile",
+        "url": "https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html",
+        "urlToImage": "https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <article
+        class="card"
+      >
+        <div
+          class="wrapper"
+          style="background-image: url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+        >
+          <div
+            class="data"
+          >
+            <div
+              class="content"
+            >
+              <h3
+                class="card-title"
+              >
+                Endangered Siberian Tiger Returns From Exile
+              </h3>
+              <p
+                class="card-description"
+              >
+                Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+              </p>
+              <a
+                href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+              >
+                Click here for full article
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="wrapper"
+          style={
+            Object {
+              "backgroundImage": "url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg)",
+              "backgroundPosition": "center",
+              "backgroundRepeat": "no-repeat",
+              "backgroundSize": "cover",
+            }
+          }
+        >
+          <div
+            className="data"
+          >
+            <div
+              className="content"
+            >
+              <h3
+                className="card-title"
+              >
+                Endangered Siberian Tiger Returns From Exile
+              </h3>
+              <p
+                className="card-description"
+              >
+                Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+              </p>
+              <a
+                href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+              >
+                Click here for full article
+              </a>
+            </div>
+          </div>
+        </div>,
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="wrapper"
+            style="background-image: url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+          >
+            <div
+              class="data"
+            >
+              <div
+                class="content"
+              >
+                <h3
+                  class="card-title"
+                >
+                  Endangered Siberian Tiger Returns From Exile
+                </h3>
+                <p
+                  class="card-description"
+                >
+                  Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                </p>
+                <a
+                  href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                >
+                  Click here for full article
+                </a>
+              </div>
+            </div>
+          </div>,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="data"
+            >
+              <div
+                className="content"
+              >
+                <h3
+                  className="card-title"
+                >
+                  Endangered Siberian Tiger Returns From Exile
+                </h3>
+                <p
+                  className="card-description"
+                >
+                  Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                </p>
+                <a
+                  href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                >
+                  Click here for full article
+                </a>
+              </div>
+            </div>,
+            "className": "wrapper",
+            "style": Object {
+              "backgroundImage": "url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg)",
+              "backgroundPosition": "center",
+              "backgroundRepeat": "no-repeat",
+              "backgroundSize": "cover",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div
+                class="data"
+              >
+                <div
+                  class="content"
+                >
+                  <h3
+                    class="card-title"
+                  >
+                    Endangered Siberian Tiger Returns From Exile
+                  </h3>
+                  <p
+                    class="card-description"
+                  >
+                    Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                  </p>
+                  <a
+                    href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                  >
+                    Click here for full article
+                  </a>
+                </div>
+              </div>,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="content"
+                >
+                  <h3
+                    className="card-title"
+                  >
+                    Endangered Siberian Tiger Returns From Exile
+                  </h3>
+                  <p
+                    className="card-description"
+                  >
+                    Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                  </p>
+                  <a
+                    href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                  >
+                    Click here for full article
+                  </a>
+                </div>,
+                "className": "data",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <div
+                    class="content"
+                  >
+                    <h3
+                      class="card-title"
+                    >
+                      Endangered Siberian Tiger Returns From Exile
+                    </h3>
+                    <p
+                      class="card-description"
+                    >
+                      Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                    </p>
+                    <a
+                      href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                    >
+                      Click here for full article
+                    </a>
+                  </div>,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h3
+                        className="card-title"
+                      >
+                        Endangered Siberian Tiger Returns From Exile
+                      </h3>,
+                      <p
+                        className="card-description"
+                      >
+                        Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                      </p>,
+                      <a
+                        href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                      >
+                        Click here for full article
+                      </a>,
+                    ],
+                    "className": "content",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <h3
+                        class="card-title"
+                      >
+                        Endangered Siberian Tiger Returns From Exile
+                      </h3>,
+                      "key": null,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Endangered Siberian Tiger Returns From Exile",
+                        "className": "card-title",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Endangered Siberian Tiger Returns From Exile",
+                      ],
+                      "type": "h3",
+                    },
+                    Object {
+                      "instance": <p
+                        class="card-description"
+                      >
+                        Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                      </p>,
+                      "key": null,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+                        "className": "card-description",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": <a
+                        href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                      >
+                        Click here for full article
+                      </a>,
+                      "key": null,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Click here for full article",
+                        "href": "https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Click here for full article",
+                      ],
+                      "type": "a",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "article": Object {
+          "author": "Sarah Gibbens",
+          "description": "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+          "publishedAt": "2017-11-02T21:39:08Z",
+          "title": "Endangered Siberian Tiger Returns From Exile",
+          "url": "https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html",
+          "urlToImage": "https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <article
+          class="card"
+        >
+          <div
+            class="wrapper"
+            style="background-image: url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+          >
+            <div
+              class="data"
+            >
+              <div
+                class="content"
+              >
+                <h3
+                  class="card-title"
+                >
+                  Endangered Siberian Tiger Returns From Exile
+                </h3>
+                <p
+                  class="card-description"
+                >
+                  Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                </p>
+                <a
+                  href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                >
+                  Click here for full article
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="wrapper"
+            style={
+              Object {
+                "backgroundImage": "url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg)",
+                "backgroundPosition": "center",
+                "backgroundRepeat": "no-repeat",
+                "backgroundSize": "cover",
+              }
+            }
+          >
+            <div
+              className="data"
+            >
+              <div
+                className="content"
+              >
+                <h3
+                  className="card-title"
+                >
+                  Endangered Siberian Tiger Returns From Exile
+                </h3>
+                <p
+                  className="card-description"
+                >
+                  Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                </p>
+                <a
+                  href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                >
+                  Click here for full article
+                </a>
+              </div>
+            </div>
+          </div>,
+          "className": "card",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="wrapper"
+              style="background-image: url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+            >
+              <div
+                class="data"
+              >
+                <div
+                  class="content"
+                >
+                  <h3
+                    class="card-title"
+                  >
+                    Endangered Siberian Tiger Returns From Exile
+                  </h3>
+                  <p
+                    class="card-description"
+                  >
+                    Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                  </p>
+                  <a
+                    href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                  >
+                    Click here for full article
+                  </a>
+                </div>
+              </div>
+            </div>,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="data"
+              >
+                <div
+                  className="content"
+                >
+                  <h3
+                    className="card-title"
+                  >
+                    Endangered Siberian Tiger Returns From Exile
+                  </h3>
+                  <p
+                    className="card-description"
+                  >
+                    Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                  </p>
+                  <a
+                    href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                  >
+                    Click here for full article
+                  </a>
+                </div>
+              </div>,
+              "className": "wrapper",
+              "style": Object {
+                "backgroundImage": "url(https://pmdvod.nationalgeographic.com/NG_Video/329/706/nw-dly-ds1702001-186-amur-tiger-release-vin_640x360_953828419671.jpg)",
+                "backgroundPosition": "center",
+                "backgroundRepeat": "no-repeat",
+                "backgroundSize": "cover",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="data"
+                >
+                  <div
+                    class="content"
+                  >
+                    <h3
+                      class="card-title"
+                    >
+                      Endangered Siberian Tiger Returns From Exile
+                    </h3>
+                    <p
+                      class="card-description"
+                    >
+                      Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                    </p>
+                    <a
+                      href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                    >
+                      Click here for full article
+                    </a>
+                  </div>
+                </div>,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="content"
+                  >
+                    <h3
+                      className="card-title"
+                    >
+                      Endangered Siberian Tiger Returns From Exile
+                    </h3>
+                    <p
+                      className="card-description"
+                    >
+                      Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                    </p>
+                    <a
+                      href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                    >
+                      Click here for full article
+                    </a>
+                  </div>,
+                  "className": "data",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <div
+                      class="content"
+                    >
+                      <h3
+                        class="card-title"
+                      >
+                        Endangered Siberian Tiger Returns From Exile
+                      </h3>
+                      <p
+                        class="card-description"
+                      >
+                        Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                      </p>
+                      <a
+                        href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                      >
+                        Click here for full article
+                      </a>
+                    </div>,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h3
+                          className="card-title"
+                        >
+                          Endangered Siberian Tiger Returns From Exile
+                        </h3>,
+                        <p
+                          className="card-description"
+                        >
+                          Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                        </p>,
+                        <a
+                          href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                        >
+                          Click here for full article
+                        </a>,
+                      ],
+                      "className": "content",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <h3
+                          class="card-title"
+                        >
+                          Endangered Siberian Tiger Returns From Exile
+                        </h3>,
+                        "key": null,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Endangered Siberian Tiger Returns From Exile",
+                          "className": "card-title",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Endangered Siberian Tiger Returns From Exile",
+                        ],
+                        "type": "h3",
+                      },
+                      Object {
+                        "instance": <p
+                          class="card-description"
+                        >
+                          Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.
+                        </p>,
+                        "key": null,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+                          "className": "card-description",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Vladik was once forcibly
+                  removed from the Russian city
+                  Vladivostok. Now, one year,
+                  400 miles, and three dead bears
+                  later, he's back.",
+                        ],
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": <a
+                          href="https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html"
+                        >
+                          Click here for full article
+                        </a>,
+                        "key": null,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Click here for full article",
+                          "href": "https://news.nationalgeographic.com/2017/11/vladik-vladivostok-russia-far-east-siberian-tiger-spd.html",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Click here for full article",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "article",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

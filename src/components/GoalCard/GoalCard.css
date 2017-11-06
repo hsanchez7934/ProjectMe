@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+.goal-card {
+  background: linear-gradient(0deg, #c0b283, 35%, #000);
+  border: 1px solid #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  margin-bottom: 40px;
+  width: 650px; }
+  .goal-card .card-left-side {
+    height: 100%;
+    position: relative;
+    width: 60%; }
+    .goal-card .card-left-side .goal-title-container {
+      align-items: center;
+      background: linear-gradient(0deg, #373737, 35%, #c0b283);
+      box-shadow: 7px 7px 7px 1px #373737;
+      display: flex;
+      height: 60%;
+      justify-content: center;
+      left: -5px;
+      overflow: scroll;
+      position: absolute;
+      top: -15px;
+      width: 100%; }
+      .goal-card .card-left-side .goal-title-container .goal-title {
+        background-color: #000;
+        color: #f4f4f4;
+        font-size: 26px;
+        height: 90%;
+        margin: 0 auto;
+        overflow: scroll;
+        padding: 60px 10px;
+        text-align: center;
+        width: 95%; }
+    .goal-card .card-left-side .goal-card-date-container {
+      color: #373737;
+      height: 40%;
+      margin-top: 150px;
+      padding: 30px 25px 0px 25px; }
+      .goal-card .card-left-side .goal-card-date-container .weekday {
+        color: #f4f4f4;
+        font-size: 27px;
+        margin: 0;
+        padding-bottom: 10px; }
+      .goal-card .card-left-side .goal-card-date-container .date {
+        font-size: 15px;
+        margin: 0;
+        padding-bottom: 2px; }
+      .goal-card .card-left-side .goal-card-date-container .time {
+        font-size: 12px;
+        margin: 0; }
+  .goal-card .card-right-side {
+    height: 100%;
+    width: 40%; }
+    .goal-card .card-right-side .goal-description {
+      border-left: 1px solid #f4f4f4;
+      border-bottom: 1px solid #f4f4f4;
+      color: #f4f4f4;
+      font-weight: lighter;
+      height: 65%;
+      margin: 15px auto;
+      overflow: scroll;
+      padding: 15px 10px;
+      text-align: center;
+      width: 80%; }
+    .goal-card .card-right-side .delete-button {
+      background-color: #000;
+      border-width: 0px;
+      color: #f4f4f4;
+      font-size: 15px;
+      display: block;
+      height: 40px;
+      margin: 0 auto;
+      width: 100px; }
+    .goal-card .card-right-side .delete-button:hover {
+      background-color: #c0b283;
+      border: 4px solid #000;
+      cursor: pointer;
+      color: #000;
+      font-weight: bold; }

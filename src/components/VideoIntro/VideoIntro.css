@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+#video-container {
+  height: 100vh;
+  margin: 0;
+  z-index: -100; }
+  #video-container #video-container video {
+    animation-delay: 1s;
+    height: 100vh;
+    object-fit: cover;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-timing-function: cubic-bezier(1, 0, 2, 0.2);
+    -webkit-animation-duration: .2s;
+    width: 100%; }
+  #video-container #skip-button {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    background-color: #000;
+    border: 1px solid #fff;
+    bottom: 0px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    height: 50px;
+    left: 20px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 200px; }
+  #video-container #skip-button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer; }
+  #video-container #skip-button:focus {
+    outline: none; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 0.1; }
+  30% {
+    opacity: 0.2; }
+  50% {
+    opacity: 0.3; }
+  70% {
+    opacity: 0.4; }
+  100% {
+    opacity: 0.5; } }

@@ -1,4 +1,4 @@
-const quote = (state = [], action) => {
+const quote = (state = {}, action) => {
   switch (action.type) {
   case 'GET_QUOTE':
     return action.quote;

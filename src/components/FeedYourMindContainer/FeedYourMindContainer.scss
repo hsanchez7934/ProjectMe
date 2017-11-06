@@ -4,64 +4,64 @@
 
 .info-card-container {
   background-color: $paper;
-  display: flex;
   flex-direction: column;
+  display: flex;
   padding: 0px;
   .feed-your-mind-header {
     background-image: url(../../assets/mindhero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0;
+    background-attachment: fixed;
+    height: 600px;
     margin: 0;
-    height: 650px;
+    padding: 0;
       .header-top-section {
-        height: 50%;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
+        height: 50%;
+        justify-content: center;
         .feed-your-mind-title {
-          color: $palegold;
-          margin: 130px 0px 0px 0px;
-          text-align: center;
-          font-family: $petit;
-          font-size: 5em;
           animation-name: showup;
           animation-duration: 1s;
+          color: $palegold;
+          font-family: $petit;
+          font-size: 5em;
+          margin: 130px 0px 0px 0px;
+          text-align: center;
         }
       }
       .header-bottom-section {
         height: 50%;
         .feed-your-mind-quote {
+          animation-duration: 5s;
+          animation-name: slidein;
           color: $paper;
           font-size: 20px;
           font-family: $open-sans;
           margin: 0px 0px 0px 0px;
-          padding: 0px 30px 0px 30px;
+          padding: 0px 60px 0px 60px;
           text-align: center;
-          animation-name: slidein;
-          animation-duration: 5s;
           overflow-x: scroll;
           overflow-y: scroll;
         }
         .feed-your-mind-quote-author {
+          animation-name: slidein;
+          animation-duration: 5s;
           color: $paper;
           font-size: 16px;
           font-family: $open-sans;
           margin: 30px 0px 0px 0px;
           text-align: center;
-          animation-name: slidein;
-          animation-duration: 5s;
         }
       }
   }
   .card-container {
+    background: linear-gradient(0deg, $charcoal, $paper 70%);
     display: flex;
     overflow-x: scroll;
-    background: linear-gradient(0deg, $charcoal, $paper 70%);
   }
 }
-
 
 @keyframes slidein {
   from {

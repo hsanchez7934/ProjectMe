@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Petit+Formal+Script);
+.goalcards-container-parent-node {
+  background-color: #f4f4f4; }
+  .goalcards-container-parent-node .goalcard-container-header {
+    background-image: url(../../assets/goalshero5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 650px; }
+    .goalcards-container-parent-node .goalcard-container-header .goalcards-header-top-section {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      justify-content: center; }
+      .goalcards-container-parent-node .goalcard-container-header .goalcards-header-top-section .goalcard-container-header-title {
+        color: #c0b283;
+        font-family: "Petit Formal Script", cursive;
+        font-size: 55px;
+        margin: 50px 0px 0px 0px;
+        text-align: center; }
+    .goalcards-container-parent-node .goalcard-container-header .goalcards-header-bottom-section {
+      height: 50%; }
+      .goalcards-container-parent-node .goalcard-container-header .goalcards-header-bottom-section .goal-card-quote {
+        color: #c0b283;
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0px 60px;
+        text-align: center; }
+      .goalcards-container-parent-node .goalcard-container-header .goalcards-header-bottom-section .goal-card-quote-author {
+        color: #c0b283;
+        margin: 0;
+        text-align: center; }
+  .goalcards-container-parent-node .goal-card-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; }

@@ -1,0 +1,50 @@
+@import "../../styles/opensans.scss";
+@import "../../styles/petitfont.scss";
+@import "../../styles/colors.scss";
+
+.goalcards-container-parent-node {
+  background-color: $paper;
+  .goalcard-container-header {
+    background-image: url(../../assets/goalshero5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 650px;
+    .goalcards-header-top-section {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      justify-content: center;
+      .goalcard-container-header-title {
+        color: $palegold;
+        font-family: $petit;
+        font-size: 55px;
+        margin: 50px 0px 0px 0px;
+        text-align: center;
+      }
+    }
+    .goalcards-header-bottom-section {
+      height: 50%;
+      .goal-card-quote {
+        color: $palegold;
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0px 60px;
+        text-align: center;
+      }
+      .goal-card-quote-author {
+        color: $palegold;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+  .goal-card-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+  }
+}

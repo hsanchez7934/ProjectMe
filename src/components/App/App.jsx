@@ -1,29 +1,33 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Controls from '../Controls/Controls.jsx';
 import GoalCardContainer from '../GoalCardContainer/GoalCardContainer.jsx';
 import FeedYourMindContainer from '../FeedYourMindContainer/FeedYourMindContainer.jsx';
-import Hero from '../Hero/Hero.jsx';
+import VideoIntro from '../VideoIntro/VideoIntro.jsx';
 import SchoolData from '../SchoolData/SchoolData.jsx';
-import newsKey from '../../newskey.js';
-import govKey from '../../govkey.js';
-import './App.css';
+import LandingPage from '../LandingPage/LandingPage.jsx';
 
-class App extends Component {
-
-
-
-  render() {
-    return (
-      <div className="App">
-        {/* <Hero /> */}
-        {/* <Controls /> */}
-        {/* <GoalCardContainer /> */}
-        {/* <FeedYourMindContainer /> */}
-        <SchoolData />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <div className="App">
+      <Route
+        exact path='/'
+        render={() => <VideoIntro /> } />
+      <Route
+        exact path='/landingpage'
+        render={() => <LandingPage /> } />
+      <Route
+        exact path='/goalstracker'
+        render={() => <GoalCardContainer /> } />
+      <Route
+        exact path='/feedyourmind'
+        render={() => <FeedYourMindContainer /> } />
+      <Route
+        exact path='/schooldata'
+        render={() => <SchoolData /> } />
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

@@ -2,19 +2,19 @@
 @import "../../styles/colors.scss";
 
 .card {
-  float: left;
-  padding: 0 1.7rem;
-  min-width: 400px;
-  height: 550px;
   color: $paper;
+  float: left;
+  height: 550px;
   margin-bottom: 30px;
+  min-width: 400px;
+  padding: 0 1.7rem;
   .wrapper {
-    min-height: 540px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
-    border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    min-height: 540px;
+    overflow: hidden;
+    position: relative;
     &:hover {
       .data {
         transform: translateY(-15px);
@@ -22,18 +22,18 @@
     }
   }
   .data {
-    position: absolute;
     bottom: -16px;
-    width: 100%;
+    position: absolute;
     transform: translateY(calc(70px + 1em));
     transition: transform 0.3s;
+    width: 100%;
     .content {
+      background-color: $black;
+      box-shadow: 0 5px 30px 10px rgba($black, 0.3);
       padding: 1em;
       position: relative;
-      z-index: 1;
-      background-color: $black;
       opacity: 0.8;
-      box-shadow: 0 5px 30px 10px rgba($black, 0.3);
+      z-index: 1;
         .card-title {
           font-family: $open-sans;
           font-weight: 300;
@@ -41,23 +41,23 @@
           overflow: scroll;
         }
         .card-description {
+          font-weight: 300;
           height: 70px;
           margin: 0px 0px 0px 0px;
           overflow: scroll;
           padding-top: 15px;
-          font-weight: 300;
         }
         a {
-          text-decoration: none;
-          display: block;
-          padding-top: 10px;
           color: $silk;
+          display: block;
           font-family: $open-sans;
+          padding-top: 10px;
+          text-decoration: none;
         }
         a:hover {
-          text-decoration: underline;
-          font-weight: 600;
           color: $palegold;
+          font-weight: 600;
+          text-decoration: underline;
         }
     }
   }

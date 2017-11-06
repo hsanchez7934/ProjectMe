@@ -18,8 +18,12 @@ const FeedYourMindCard = ({ article }) => {
         style={backgroundStyle(urlToImage)}>
         <div className="data">
           <div className="content">
-            <h3 className="card-title">{title}</h3>
-            <p className="card-description">{description}</p>
+            <h3 className="card-title">
+              {title}
+            </h3>
+            <p className="card-description">
+              {description}
+            </p>
             <a href={url}>Click here for full article</a>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import * as actions from '../actions';
+import newsArticlesMockData from '../utilitiesData/mockData/newsArticlesMockData.js';
+import dropOutMockData from '../utilitiesData/mockData/dropOutMockData.js';
+import collegeEnrollmentMockData from '../utilitiesData/mockData/collegeEnrollmentMockData.js';
+import disconnectedYouthMockData from '../utilitiesData/mockData/disconnectedYouthMockData.js';
+import goalsMockData from '../utilitiesData/mockData/goalsMockData.js';
 
 describe(`Actions unit testing`, () =>{
-
-
-  beforeEach(() => {
-
-  });
 
   test(`createGoal action creator should return correct
         information and type`, () => {
@@ -25,18 +25,7 @@ describe(`Actions unit testing`, () =>{
   test(`getGoal action creator should return correct information
           and type`, () => {
 
-      const goal1 = {
-        title: 'Get a job',
-        body: 'Prepare resume, apply, network'
-      };
-      const goal2 = {
-        title: 'Build dog house',
-        body: 'Buy material, build'
-      };
-
-      const actionPayload = [goal1, goal2];
-
-      const expectation = actions.getGoal(actionPayload);
+      const expectation = actions.getGoal(goalsMockData);
 
       expect(expectation.type).toEqual('GET_GOALS');
       expect(expectation.goalsArray[0].title).toEqual('Get a job');
@@ -45,67 +34,89 @@ describe(`Actions unit testing`, () =>{
       expect(expectation.goalsArray.length).toEqual(2);
     });
 
-  test(`delete goal action creator should`, () => {
+  test(`delete goal action creator should return
+        the desire goal to be deleted with correct with
+        action type and information`, () => {
 
-    const goal = {
-      title: 'Gradute Turing',
-      body: 'Study and work hard'
-    };
+      const goal = {
+        title: 'Gradute Turing',
+        body: 'Study and work hard'
+      };
 
-    const expectation = actions.deleteGoal(goal);
+      const expectation = actions.deleteGoal(goal);
 
-    expect(expectation.type).toEqual('REMOVE_GOAL');
-    expect(expectation.goalToRemove.title).toEqual('Gradute Turing');
-    expect(expectation.goalToRemove.body).toEqual('Study and work hard');
-  });
+      expect(expectation.type).toEqual('REMOVE_GOAL');
+      expect(expectation.goalToRemove.title).toEqual('Gradute Turing');
+      expect(expectation.goalToRemove.body).toEqual('Study and work hard');
+    });
 
-  test(`getQuote actions test`, () => {
-    const quote1 = {
-      quote: `What would you attempt to do
-              if you knew you could not fail`,
-      author: `me`
-    };
+  test(`getQuote actions should return correct type
+        and return correct payload information`, () => {
+      const quote1 = {
+        quote: `What would you attempt to do
+                if you knew you could not fail`,
+        author: `me`
+      };
 
-    const quote2 = {
-      quote: `The difference between who we are
-              and who we want to be is the leap of
-              faith in between`,
-      author: `me`
-    };
+      const action = quote1;
 
-    const action = [quote1, quote2];
+      const expectation = actions.getQuote(action);
+      expect(expectation.type).toEqual('GET_QUOTE');
+      expect(expectation.quote.author).toEqual('me');
+    });
 
-    const expectation = actions.getQuote(action);
 
-    expect(expectation.type).toEqual('GET_QUOTE');
-    expect(expectation.quoteArray.length).toEqual(2);
-    expect(expectation.quoteArray[0].author).toEqual('me');
-  });
+  test(`getArticles action creator should return correct
+        action type and correct information`, () => {
 
-  test(`quoteDB action creator should return quotes array`, () => {
-    const quote1 = {
-      quote: `What would you attempt to do
-              if you knew you could not fail`,
-      author: `me`
-    };
+      const expectation = actions.getArticles(newsArticlesMockData);
 
-    const quote2 = {
-      quote: `The difference between who we are
-              and who we want to be is the leap of
-              faith in between`,
-      author: `me`
-    };
+      expect(expectation.type).toEqual('GET_ARTICLES');
+      expect(expectation.articles[0].title)
+        .toEqual('Endangered Siberian Tiger Returns From Exile');
+      expect(expectation.articles[0].author).toEqual('Sarah Gibbens');
+      expect(expectation.articles.length).toEqual(2);
+    });
 
-    const action = [quote1, quote2];
+  test(`dropOutData action creator should return correct
+        action type and correct information`, () => {
 
-    const expectation = actions.quoteDB(action);
+      const expectation = actions.dropOutData(dropOutMockData);
 
-    expect(expectation.type).toEqual('QUOTES_DB');
-    expect(expectation.quotesDBArray.length).toEqual(2);
-    expect(expectation.quotesDBArray[0].author).toEqual('me');
-  });
+      expect(expectation.type).toEqual('GET_DROP_OUT_DATA');
+      expect(expectation.dropOutDataArray.length).toEqual(2);
+      expect(expectation.dropOutDataArray[0].Count).toEqual('6234');
+      expect(expectation.dropOutDataArray[0].Percentage).toEqual('23.5');
+      expect(expectation.dropOutDataArray[0].Year).toEqual('2000');
+    });
 
-  test.skip(`getArticles action creator should return articles array`, () => {
-    // const
-  });
+  test(`collegeEnrollmentData action creator should return
+        correct type and correct information`, () => {
+
+      const expectation = actions.collegeEnrollmentData(
+        collegeEnrollmentMockData
+      );
+
+      expect(expectation.type).toEqual('GET_COLLEGE_ENROLLMENT_DATA');
+      expect(expectation.collegeEnrollmentDataArray.length).toEqual(2);
+      expect(expectation.collegeEnrollmentDataArray[0].Count).toEqual('9452');
+      expect(expectation.collegeEnrollmentDataArray[0].Percentage)
+        .toEqual('35.5');
+      expect(expectation.collegeEnrollmentDataArray[0].Year).toEqual('2000');
+    });
+
+  test(`disconnectedYouthData action creator should return
+        correct type and correct information`, () => {
+
+      const expectation = actions.disconnectedYouthData(
+        disconnectedYouthMockData
+      );
+
+      expect(expectation.type).toEqual('GET_DISCONNECTED_YOUTH_DATA');
+      expect(expectation.disconnectedYouthDataArray.length).toEqual(2);
+      expect(expectation.disconnectedYouthDataArray[0].Count).toEqual('3676.6');
+      expect(expectation.disconnectedYouthDataArray[0].Percentage)
+        .toEqual("13.9");
+      expect(expectation.disconnectedYouthDataArray[0].Year).toEqual('2000');
+    });
 });

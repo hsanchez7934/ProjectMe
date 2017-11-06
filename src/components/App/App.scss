@@ -3,23 +3,20 @@
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  margin: none;
-  background-color: $paper;
-}
-
-.App {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  html {
+    height: 100%;
+    width: 100%;
+    body {
+      background-color: $paper;
+      height: 100%;
+      margin: none;
+      width: 100%;
+      .App {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
 }

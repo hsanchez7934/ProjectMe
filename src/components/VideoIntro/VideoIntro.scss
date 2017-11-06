@@ -1,0 +1,65 @@
+@import "../../styles/opensans.scss";
+@import "../../styles/colors.scss";
+
+#video-container {
+  height: 100vh;
+  margin: 0;
+  z-index: -100;
+  #video-container video {
+    animation-delay: 1s;
+    height: 100vh;
+    object-fit: cover;
+   -webkit-animation-name: blinker;
+   -webkit-animation-iteration-count: 5;
+   -webkit-animation-timing-function: cubic-bezier(1, 0, 2, .2);
+   -webkit-animation-duration: .2s;
+   width: 100%;
+  }
+  #skip-button {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    background-color: $black;
+    border: 1px solid $white;
+    bottom: 0px;
+    color: $white;
+    font-size: 18px;
+    font-family: $open-sans;
+    height: 50px;
+    left: 20px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 200px;
+  }
+  #skip-button:hover {
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
+    cursor: pointer;
+  }
+  #skip-button:focus {
+    outline: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

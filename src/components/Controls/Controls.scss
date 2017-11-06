@@ -1,0 +1,54 @@
+@import "../../styles/opensans.scss";
+@import "../../styles/colors.scss";
+
+.controls-container {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  font-family: $open-sans;
+  height: 300px;
+  justify-content: center;
+  padding: 40px 0px 40px 0px;
+  .controls-title {
+    color: $palegold;
+    font-size: 30px;
+    margin: 0px 0px;
+    text-align: center;
+  }
+  input {
+    background-color: $palegold;
+    border: 3px solid $charcoal;
+    border-width: 0px;
+    color: $white;
+    font-size: 21px;
+    height: 80px;
+    margin: 30px 0px 0px 0px;
+    opacity: 0.9;
+    opacity: 0.9;
+    padding-left: 20px;
+    width: 30%;
+  }
+  input:focus {
+    outline-color: $paper;
+    outline-width: 7px;
+  }
+  ::-webkit-input-placeholder {
+    color: $white;
+    opacity: 0.7;
+  }
+  #submit-button {
+    background-color: $palegold;
+    color: $charcoal;
+    height: 100px;
+    padding-left: 0px;
+    width: 100px;
+  }
+
+  #submit-button:hover {
+    background-color: $paper;
+    border: 3px solid $black;
+    color: $charcoal;
+    cursor: pointer;
+  }
+}
